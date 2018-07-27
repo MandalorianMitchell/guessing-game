@@ -3,8 +3,34 @@
   <head>
     <title>My Guessing Game!</title>
     <script type="text/javascript">
-    var username = prompt('Before we get started, please tell me your name:');
-    alert('Hello, ' + username + '!!');
+var name = prompt('Before we get started, please enter your name:');
+alert('Hello ' + name + ', and welcome to my Guessing Game!!!');
+
+var questionOne = confirm('Question 1: ' + 'Was I born in Oregon?');
+console.log('Answer Yes: ' + questionOne);
+if (questionOne) {
+  alert('Wrong! I was born in California.');
+} else {
+  alert('Correct! I was not born in Oregon.');
+};
+
+var questionTwo = prompt('Question 2: ' + 'How many cats do I have?');
+console.log('Answer Yes: ' + questionTwo);
+if (questionTwo == 2) {
+  alert('Hey! You got it!');
+} else if (questionTwo > 2) {
+  alert('Sorry, that wasn\'t the right answer!');
+}  else if (questionTwo < 2) {
+  alert('Nope, sorry!');
+};
+
+var questionThree = confirm('Question 3: ' + 'Is my favorite color yellow?');
+console.log('Answer Yes: ' + questionThree);
+if (questionThree) {
+  alert('Yeah! You got it right!');
+} else {
+  alert('You got it wrong, bummer!');
+}
     </script>
   </head>
     <body>
