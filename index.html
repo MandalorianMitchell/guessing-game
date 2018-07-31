@@ -5,7 +5,7 @@
   </head>
     <body>
       <h1>Welcome to what will soon be my Guessing Game!</h1>
-        <p><input type='button' value='CLick here to get started!' onclick='beginGame()'></p>
+        <p><input type ='button' value='Click here to begin the game!' onClick='beginGame()'></p>
           <br>
         <p>Let me first start out by telling you a little about myself. From there
         I'll ask you a series of questions based off that information.</p>
@@ -27,15 +27,21 @@
         <p>Well, I think that about explains who I am! Hopefully you enjoyed reading about me,
           and I hope you enjoy my guessing game as well!</p>
 
-        <p><input type='button' value='Question number 1' onclick='firstQuestion()'></p>
+        <p><button onclick='firstQuestion(); this.onclick=null;'>Question number 1</button></p>
           <br>
-        <p><input type='button' value='Question number 2' onclick='secondQuestion()'></p>
+        <p><button onclick='secondQuestion(); this.onclick=null;'>Question number 2</button></p>
           <br>
-        <p><input type='button' value='Question number 3' onclick='thirdQuestion()'></p>
+        <p><button onclick='thirdQuestion(); this.onclick=null;'>Question number 3</button></p>
           <br>
-        <p><input type='button' value='Question number 4' onclick='fourthQuestion()'></p>
+        <p><button onclick='fourthQuestion(); this.onclick=null;'>Question number 4</button></p>
           <br>
-        <p><input type='button' value='Question number 5' onclick='fifthQuestion()'></p>
+        <p><button onclick='fifthQuestion(); this.onclick=null;'>Question number 5</button></p>
+
+          <br>
+          <br>
+        <div align='center'>
+          <p><button onclick='gameScore(); this.onclick=null;'>Click here to see your score!</button></p>
+        </div>
 
         <script type="text/javascript" src="main.js"></script>
     </body>

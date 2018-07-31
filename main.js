@@ -1,7 +1,11 @@
 function beginGame() {
   var name = prompt('Before we get started, please enter your name:');
-  alert('Hi ' + name + ', and welcome to my Guessing Game!!!');
-  console.log('Username = ' + name);
+  while ((name == '') || (name == null))  {
+    name = prompt('Please enter a valid name:');
+  }
+
+  alert('Hello ' + name + ', and welcome to my Guessing Game!');
+
   return;
 }
 
@@ -70,6 +74,12 @@ function fourthQuestion() {
   }
 
   return fourthQuestion;
+}
+
+function gameScore(firstQuestion, secodQuestion, thirdQuestion, fourthQuestion) {
+  alert('You scored ' + counter + ' out of 4 Questions Correctly');
+
+  return gameScore;
 }
 
 function fifthQuestion() {
