@@ -5,8 +5,7 @@ function beginGame() {
   }
 
   alert('Hello ' + name + ', and welcome to my Guessing Game!');
-
-  return;
+  console.log('Username: ' + name);
 }
 
 var counter = 0;
@@ -21,8 +20,6 @@ function firstQuestion() {
     counter++;
     console.log('Score: ' + counter);
   }
-
-  return firstQuestion;
 }
 
 function secondQuestion() {
@@ -39,8 +36,6 @@ function secondQuestion() {
     alert('Nope, sorry!');
     console.log(questionTwo + ': Wrong');
   }
-
-  return secondQuestion;
 }
 
 function thirdQuestion() {
@@ -54,8 +49,6 @@ function thirdQuestion() {
     alert('You got it wrong, bummer!');
     console.log(questionThree + ': Wrong');
   }
-
-  return thirdQuestion;
 }
 
 function fourthQuestion() {
@@ -66,20 +59,17 @@ function fourthQuestion() {
     counter++;
     console.log('Score: ' + counter);
   } else if (bonusQuestion < 14) {
-    alert('Sorry, that answer was too low');
+    alert('Sorry, that answer was too low!');
     console.log(bonusQuestion + ': Wrong - answer too low!');
   } else if (bonusQuestion > 14) {
-    alert('Sorry, that answer was too high');
+    alert('Sorry, that answer was too high!');
     console.log(bonusQuestion + ': Wrong - answer too high!');
   }
-
-  return fourthQuestion;
 }
 
 function gameScore(firstQuestion, secodQuestion, thirdQuestion, fourthQuestion) {
   alert('You scored ' + counter + ' out of 4 Questions Correctly');
 
-  return gameScore;
 }
 
 function fifthQuestion() {
@@ -87,6 +77,4 @@ function fifthQuestion() {
   while ((questionFive == '') || (questionFive != 38)) {
     questionFive = prompt('Sorry, that answer was wrong. Please try again.');
   }
-
-  return fifthQuestion;
 }
