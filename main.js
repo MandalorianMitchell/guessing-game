@@ -1,7 +1,7 @@
 function beginGame() {
-  var name = prompt('Before we get started, please enter your name:');
-  while ((name == '') || (name == null))  {
-    name = prompt('Please enter a valid name:');
+  var userName = prompt('Before we get started, please enter your name:');
+  while ((userName == '') || (userName == null))  {
+    userName = prompt('Please enter a valid name:');
   }
 
   alert('Hello ' + name + ', and welcome to my Guessing Game!');
