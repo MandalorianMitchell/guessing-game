@@ -9,13 +9,14 @@ function beginGame() {
 }
 
 var counter = 0;
-function firstQuestion() {
-  var questionOne = confirm('Question 1: ' + 'Was I born in Oregon?');
+function oregonBorn(question) {
+  var questionOne = confirm(question);
+  var p = document.getElementById('birth-place');
   if (questionOne) {
-    alert('Wrong! I was born in California.');
+    p.innerHTML = 'Wrong! I was born in California.';
     console.log(questionOne + ': Wrong');
-  }  else {
-    alert('Correct! I was not born in Oregon.');
+  } else {
+    p.innerHTML = 'Correct! I was not born in Oregon.';
     console.log(questionOne + ': Correct');
     counter++;
     console.log('Score: ' + counter);
