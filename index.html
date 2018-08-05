@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link type="text/css"  rel="stylesheet" href="style.css">
     <title>My Guessing Game!</title>
   </head>
     <body>
-      <h1>Welcome to what will soon be my Guessing Game!</h1>
-        <p><input type ='button' value='Click here to begin the game!' onClick='beginGame()'></p>
-          <br>
+      <h1>Welcome to the Coolest Guessing Game Ever!</h1>
         <p>Let me first start out by telling you a little about myself. From there
         I'll ask you a series of questions based off that information.</p>
         <p>And if you happen to get all of those questions right - awesome! You might
         get a high-five, or a cat picture or something.</p>
-        <p>So without further ado, <em>Let's get started!!</em></p>
       <h1>About me:</h1>
         <p>Honestly, there's not much to say! I'm 27 years old, and I've pratically lived
           in Oregon my whole life (though I wasn't born here). I've got 2 cats -
@@ -22,29 +20,32 @@
         <p>Other than that, I love the beach, conspiracy theories, large amounts of coffee,
           and going out to eat more than I should.</p>
           <br>
-          <br>
-          <br>
         <p>Well, I think that about explains who I am! Hopefully you enjoyed reading about me,
           and I hope you enjoy my guessing game as well!</p>
-
-        <p><button onclick='oregonBorn("Was I born in Oregon?"); this.onclick=null;'>Question number 1</button></p>
           <br>
+          <br>
+        <p><input type ='button' value='Click here to begin the game!' onClick='beginGame()'>
+          <br>
+        <h2 id='who-are-you-?'></h2>
+          <br>
+        <p class='first-class'><button onclick='oregonBorn("Was I born in Oregon?"); this.onclick=null;'>Question number 1</button>
         <p id='birth-place'></p>
-          <br>
-        <p><button onclick='secondQuestion(); this.onclick=null;'>Question number 2</button></p>
-          <br>
-        <p><button onclick='thirdQuestion(); this.onclick=null;'>Question number 3</button></p>
-          <br>
-        <p><button onclick='fourthQuestion(); this.onclick=null;'>Question number 4</button></p>
-          <br>
-        <p><button onclick='fifthQuestion(); this.onclick=null;'>Question number 5</button></p>
 
-          <br>
-          <br>
+        <p class='first-class'><button onclick='lotsOfCats("How many cats do I have?"); this.onclick=null;'>Question number 2</button>
+        <p id='pet-count'></p>
+
+        <p class='first-class'><button onclick='faveColor("Is my favorite color yellow?"); this.onclick=null;'>Question number 3</button>
+        <p id='i-like-this-color'></p>
+
+        <p class='first-class'><button onclick='coolNumber("Bonus Question: What is my favorite number? (Less than 20)"); this.onclick=null;'>Question number 4</button>
+        <p id='this-number-is-rad'></p>
+
+        <p class='first-class'><button onclick='mindReader("Bonus-BONUS Question: What number am I thinking of? (Hint: Less than 50)"); this.onclick=null;'>Question number 5</button>
+        <p id='try-and-guess'></p>
+
         <div align='center'>
           <p><button onclick='gameScore(); this.onclick=null;'>Click here to see your score!</button></p>
         </div>
-
-        <script type="text/javascript" src="main.js"></script>
+      <script type="text/javascript" src="main.js"></script>
     </body>
 </html
