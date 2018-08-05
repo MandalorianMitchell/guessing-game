@@ -23,27 +23,27 @@
         <p>Well, I think that about explains who I am! Hopefully you enjoyed reading about me,
           and I hope you enjoy my guessing game as well!</p>
 
-        <p class='first-class'><input type ='button' value='Click here to begin the game!' onClick='beginGame()'>
+        <p><input type ='button' value='Click here to begin the game!' onClick='beginGame()'>
           <br>
         <h2 id='who-are-you-?'></h2>
           <br>
-        <p><button onclick='oregonBorn("Was I born in Oregon?"); this.onclick=null;'>Question number 1</button>
+        <p><button class='first-class questions' onclick='oregonBorn(); this.onclick=null;'>Question number 1</button>
         <p id='birth-place'></p>
 
-        <p><button onclick='lotsOfCats("How many cats do I have?"); this.onclick=null;'>Question number 2</button>
+        <p><button class='first-class questions' onclick='lotsOfCats("How many cats do I have?"); this.onclick=null;'>Question number 2</button>
         <p id='pet-count'></p>
 
-        <p><button onclick='faveColor("Is my favorite color yellow?"); this.onclick=null;'>Question number 3</button>
+        <p><button class='first-class questions' onclick='faveColor("Is my favorite color yellow?"); this.onclick=null;'>Question number 3</button>
         <p id='i-like-this-color'></p>
 
-        <p><button onclick='coolNumber("Bonus Question: What is my favorite number? (Less than 20)"); this.onclick=null;'>Question number 4</button>
+        <p><button class='first-class questions' onclick='coolNumber("Bonus Question: What is my favorite number? (Less than 20)"); this.onclick=null;'>Question number 4</button>
         <p id='this-number-is-rad'></p>
 
-        <p><button onclick='mindReader("Bonus-BONUS Question: What number am I thinking of? (Hint: Less than 50)"); this.onclick=null;'>Question number 5</button>
+        <p><button class='first-class questions' onclick='mindReader("Bonus-BONUS Question: What number am I thinking of? (Hint: Less than 50)"); this.onclick=null;'>Question number 5</button>
         <p id='try-and-guess'></p>
           <br>
           <br>
-          <p><button onclick='gameScore(); this.onclick=null;'>Click here to see your score!</button></p>
+        <p><button onclick='gameScore(); this.onclick=null;'>Click here to see your score!</button></p>
       <script type="text/javascript" src="main.js"></script>
     </body>
 </html

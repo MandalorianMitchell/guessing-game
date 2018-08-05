@@ -10,18 +10,24 @@ function beginGame() {
 }
 
 var counter = 0;
-function oregonBorn(question) {
-  var questionOne = confirm(question);
-  var p = document.getElementById('birth-place');
-  if (questionOne) {
-    p.innerHTML = 'Wrong! I was born in California.';
-    console.log(question + ': Wrong');
-  } else {
-    p.innerHTML = 'Correct! I was not born in Oregon.';
-    console.log(question + ': Correct');
+function askQuestion(question, correctAnswer, elementId, correctResponse, wrongResponse) {
+  var userAnswer = confirm(question);
+  var p = document.getElementById(elementId);
+  if (userAnswer === correctAnswer) {
+    p.innerHTML = correctResponse;
+    console.log(userAnswer + ': Correct');
     counter++;
     console.log('Score: ' + counter);
+  } else {
+    document.getElementById(elementId);
+    p.innerHTML = wrongResponse;
+    console.log(userAnswer + ': Wrong');
   }
+}
+
+function oregonBorn() {
+  askQuestion('Was I born in Oregon?', false, 'birth-place',
+   'Correct! I was not born in Oregon.', 'Wrong! I was born in California.');
 }
 
 function lotsOfCats(meow) {
@@ -38,18 +44,9 @@ function lotsOfCats(meow) {
   }
 }
 
-function faveColor(yellow) {
-  var questionThree = confirm(yellow);
-  var r = document.getElementById('i-like-this-color');
-  if (questionThree) {
-    r.innerHTML = 'Yeah! You got it right!';
-    console.log(yellow + ': Correct');
-    counter++;
-    console.log('Score: ' + counter);
-  } else {
-    r.innerHTML = 'You got it wrong, bummer!';
-    console.log(yellow + ': Wrong');
-  }
+function faveColor() {
+  askQuestion('Is my favorite color Yellow?', true, 'i-like-this-color',
+   'Yeah! You got it right!', 'You got it wrong, bummer!');
 }
 
 function coolNumber(number) {
@@ -85,7 +82,7 @@ function mindReader(psychic) {
   }
 }
 
-function gameScore(oregonBorn, lotsOfCats, faveColor, coolNumber, mindReader) {
+function gameScore() {
   alert('You scored ' + counter + '/5 Questions Correctly');
 
 }
