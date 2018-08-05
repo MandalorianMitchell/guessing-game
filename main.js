@@ -27,14 +27,18 @@ function askQuestion(question, correctAnswer, elementId, correctResponse, wrongR
 
 function oregonBorn() {
   askQuestion('Was I born in Oregon?', false, 'birth-place',
-   'Correct! I was not born in Oregon.', 'Wrong! I was born in California.');
+   'Correct! I was not born in Oregon.' +
+   '<br><br><img src="./Images/Thumbs-up.jpg" alt="John Rambo" width="200px">',
+   'Wrong! I was born in California.' +
+   '<br><br><img src="./Images/Thumbs-down.jpg" alt="Thumbs down guy" width="200px">');
 }
 
 function lotsOfCats(meow) {
   var questionTwo = prompt(meow);
   var q = document.getElementById('pet-count');
   if (questionTwo == 2) {
-    q.innerHTML = 'Hey! You got it!';
+    q.innerHTML = 'Hey! You got it!' +
+    '<br><br><img src="./Images/JCVD-Thumbs-up.jpg" alt="JCVD" width="200px">';
     console.log(meow + ': Correct');
     counter++;
     console.log('Score: ' + counter);
@@ -46,14 +50,17 @@ function lotsOfCats(meow) {
 
 function faveColor() {
   askQuestion('Is my favorite color Yellow?', true, 'i-like-this-color',
-   'Yeah! You got it right!', 'You got it wrong, bummer!');
+   'Yeah! You got it right!' +
+   '<br><br><img src="./Images/Thumbs-up.jpg" alt="Borat" width="200px">',
+   'You got it wrong, bummer!');
 }
 
 function coolNumber(number) {
   var bonusQuestion = prompt(number);
   var s = document.getElementById('this-number-is-rad');
   if (bonusQuestion == 14) {
-    s.innerHTML = 'You guessed it! That was super impressive!';
+    s.innerHTML = 'You guessed it! That was super impressive!' +
+    '<br><br><img src="./Images/Arnold-Thumbs-up.jpg" alt="Terminator thumbs up" width="200px">';
     console.log(number + ': Correct');
     counter++;
     console.log('Score: ' + counter);
@@ -75,7 +82,8 @@ function mindReader(psychic) {
   }
 
   if (questionFive) {
-    t.innerHTML = 'You guessed it! That was really impressive!';
+    t.innerHTML = 'You guessed it! Awesome!' +
+    '<br><br><img src="./Images/Hasselhoff-Thumbs-up.jpg" alt="David Hasselhoff" width="200px">';
     console.log(psychic + ': Correct - great guess!');
     counter++;
     console.log('Score: ' + counter);
