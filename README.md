@@ -1,10 +1,10 @@
 # guessing-game
-This is the project for Alchemy Code Lab Week 1 Class 2 - Guessing Game
-
-I have included information about myself in the HTML portion of my Guessing Game that users can read
-in order to answer each question.
-
-Questions - Number 1: Was I born in Oregon?
+<h1>This is the project for Alchemy Code Lab Week 1 Class 2 - Guessing Game</h1>
+<br>
+<p>I have included information about myself in the HTML portion of my Guessing Game that users can read
+in order to answer each question.</p>
+<br>
+<p>Questions - Number 1: Was I born in Oregon?
           - Number 2: How many cats do I have?
           - Number 3: Is my favorite color yellow?
           - Number 4: What is my favorite number?

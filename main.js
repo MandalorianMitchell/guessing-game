@@ -14,13 +14,13 @@ function askQuestion(question, correctAnswer, elementId, correctResponse, wrongR
   var userAnswer = confirm(question);
   var p = document.getElementById(elementId);
   if (userAnswer === correctAnswer) {
-    p.innerHTML = correctResponse;
+    p.innerHTML = '<span class="color-green">' + correctResponse + '</span>';
     console.log(userAnswer + ': Correct');
     counter++;
     console.log('Score: ' + counter);
   } else {
     document.getElementById(elementId);
-    p.innerHTML = wrongResponse;
+    p.innerHTML = '<span class="color-red">' + wrongResponse + '<span>';
     console.log(userAnswer + ': Wrong');
   }
 }
@@ -37,13 +37,14 @@ function lotsOfCats(meow) {
   var questionTwo = prompt(meow);
   var q = document.getElementById('pet-count');
   if (questionTwo == 2) {
-    q.innerHTML = 'Hey! You got it!' +
+    q.innerHTML = '<span class="color-green">' + 'Hey! You got it!' + '<span>' +
     '<br><br><img src="./Images/JCVD-Thumbs-up.jpg" alt="JCVD" width="200px">';
     console.log(meow + ': Correct');
     counter++;
     console.log('Score: ' + counter);
   } else {
-    q.innerHTML = 'Sorry, that wasn\'t the right answer!';
+    q.innerHTML = '<span class="color-red">' + 'Sorry, that wasn\'t the right answer!' + '<span>' +
+    '<br><br><img src="./Images/Kevin-Thumbs-down.jpg" alt="Kevin from The Office" width="200px">';
     console.log(meow + ': Wrong');
   }
 }
@@ -51,24 +52,27 @@ function lotsOfCats(meow) {
 function faveColor() {
   askQuestion('Is my favorite color Yellow?', true, 'i-like-this-color',
    'Yeah! You got it right!' +
-   '<br><br><img src="./Images/Thumbs-up.jpg" alt="Borat" width="200px">',
-   'You got it wrong, bummer!');
+   '<br><br><img src="./Images/Borat-Thumbs-up.jpg" alt="Borat" width="200px">',
+   'You got it wrong, bummer!' +
+   '<br><br><img src="./Images/Sad-James-Vanderbeek.jpg" alt="Dawson\'s Creek" width="200px">');
 }
 
 function coolNumber(number) {
   var bonusQuestion = prompt(number);
   var s = document.getElementById('this-number-is-rad');
   if (bonusQuestion == 14) {
-    s.innerHTML = 'You guessed it! That was super impressive!' +
+    s.innerHTML = '<span class="color-green">' + 'You guessed it! That was super impressive!' + '<span>' +
     '<br><br><img src="./Images/Arnold-Thumbs-up.jpg" alt="Terminator thumbs up" width="200px">';
     console.log(number + ': Correct');
     counter++;
     console.log('Score: ' + counter);
   } else if (bonusQuestion < 14) {
-    s.innerHTML = 'Sorry, that answer was too low!';
+    s.innerHTML = '<span class="color-red">' + 'Sorry, that answer was too low!' + '<span>' +
+    '<br><br><img src="./Images/Wrong-Answer.jpg" alt="Wrong Answer" width="200px">';
     console.log(number + ': Wrong - answer too low!');
   } else if (bonusQuestion > 14) {
-    s.innerHTML = 'Sorry, that answer was too high!';
+    s.innerHTML = '<span class="color-red">' + 'Sorry, that answer was too high!' + '<span>' +
+    '<br><br><img src="./Images/Wrong-Answer.jpg" alt="Wrong Answer" width="200px">';
     console.log(number + ': Wrong - answer too high!');
   }
 }
@@ -82,7 +86,7 @@ function mindReader(psychic) {
   }
 
   if (questionFive) {
-    t.innerHTML = 'You guessed it! Awesome!' +
+    t.innerHTML = '<span class="color-green">' + 'You guessed it! Awesome!' + '<span>' +
     '<br><br><img src="./Images/Hasselhoff-Thumbs-up.jpg" alt="David Hasselhoff" width="200px">';
     console.log(psychic + ': Correct - great guess!');
     counter++;
@@ -92,5 +96,5 @@ function mindReader(psychic) {
 
 function gameScore() {
   alert('You scored ' + counter + '/5 Questions Correctly');
-
+  console.log('You scored ' + counter + '/5 Questions Correctly');
 }
