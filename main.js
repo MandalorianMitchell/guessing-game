@@ -80,7 +80,7 @@ function coolNumber(number) {
 function mindReader(psychic) {
   var questionFive = prompt(psychic);
   var t = document.getElementById('try-and-guess');
-  while ((questionFive == '') || (questionFive != 38)) {
+  while ((questionFive == '') || (questionFive != 18)) {
     questionFive = prompt('Sorry, that answer was wrong. Please try again.');
     console.log(psychic + ': Wrong answer! Keep Trying!');
   }
